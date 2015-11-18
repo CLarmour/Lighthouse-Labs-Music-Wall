@@ -2,7 +2,7 @@
 <hr>
 <% @songs.each do |song| %>
   <div class="song">
-    <a href="/songs/<%= song.id %>"></a><strong>Song artist:</strong> <%= song.artist %>
+    <strong>Song artist:</strong><a href="/songs/<%= song.id %>"><%= song.artist %></a>
 
     <p>
     <strong>Song title:</strong> <%= song.title %>

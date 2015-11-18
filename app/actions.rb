@@ -15,7 +15,7 @@ end
 
 get '/songs/:id' do
   @song = Song.find params[:id]
-  @songs = Songs.where(artist: @songs.artist)
+  @songs = Song.where(artist: @song.artist)
   erb :'songs/show'
 end
 

@@ -1,0 +1,28 @@
+
+<p>
+  Artist: <%= @song.artist %>
+</p>
+
+<p>
+  <%= @song.title %>
+</p>
+
+<p>
+  <%= @song.url %>
+</p>
+
+<p>
+  Posted= <%= @song.created_at %>
+</p>
+
+<hr/>
+<p>
+  Other posts from this artist 
+  </br>
+  </br>
+  <% @songs.each do |song| %>
+
+  <p><a href="/songs/<%= song.id %>"><%= song.title %></a></p>
+
+  <% end %></p>
+<strong><a href="/messages">Back to ALL Messages</a></strong>
